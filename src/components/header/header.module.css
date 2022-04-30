@@ -1,0 +1,6 @@
+@value makerGreen, makerWhite, makerLightGrey from '../../common/colors.css';
+
+.header{position: relative; padding: 20px 0; width: 100%; text-align: center; background-color: makerGreen; }
+.logout{position: absolute; top: .8rem;right: 1rem; padding: 5px 15px; background-color: makerLightGrey; border: 0; border-radius: 0.2rem;outline: 0;}
+.logo{width: 3em;}
+.title{margin: 0; color: makerWhite; font-size: 24px;}

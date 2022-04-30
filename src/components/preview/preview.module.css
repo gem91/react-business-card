@@ -1,0 +1,10 @@
+@value mediaQuery from '../../common/size.css';
+@value makerGreen from '../../common/colors.css';
+
+.preview{padding: 0 25px; width: 50%; height: 100%; background-color:burlywood;}
+.title{margin-bottom: 20px; text-align: center;color: makerGreen;}
+.cards{display: flex; flex-direction: column; align-items: center; padding: 0;}
+
+@media screen and (max-width: mediaQuery) {
+    .preview{width: 100%;}
+}
