@@ -1,0 +1,12 @@
+@value makerWhite, makerGreen from '../../common/colors.css';
+
+.form{margin: 0 auto 20px;padding-bottom: 20px; width: 80%; border-bottom: 2px dashed #c8b99d;}
+.form:last-child{border-bottom: none;}
+.formFrame{display: flex; flex-wrap: wrap; border-left: 1px solid #888; border-top: 1px solid #888; box-sizing: border-box;}
+
+.input, .textarea, .select{padding: 8px 10px; font-size: 14px; border: 0; border-bottom: 1px solid #888; border-right: 1px solid #888; background-color: makerWhite;}
+.input:focus, .textarea:focus, .select:focus, .button:focus, .inputImg:focus{outline: 0;}
+.input, .select{flex: 1 1 30%;}
+.textarea{width: 100%; height: 50px;}
+
+.fileInput{display: flex; padding: 0; width: 100%;}
