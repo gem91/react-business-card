@@ -1,7 +1,7 @@
 @value mediaQuery from '../../common/size.css';
 @value makerGreen from '../../common/colors.css';
 
-.edit{width: 50%; height: 100%; background-color:#f4e6cc;}
+.edit{padding: 30px; width: 50%; height: 100%; background-color:#f4e6cc;}
 .title{margin-bottom: 20px; text-align: center;color: makerGreen;}
 @media screen and (max-width: mediaQuery) {
     .edit{width: 100%;}

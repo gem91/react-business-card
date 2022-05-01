@@ -1,0 +1,2 @@
+.imgButton{padding: 10px; flex: 1 1 50%; font-size: 14px; font-weight: bold; cursor: pointer; outline: 0; border: 0;border-bottom: 1px solid #888;}
+.imgButton:hover{opacity: .8;}

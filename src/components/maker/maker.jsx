@@ -18,7 +18,8 @@ const Maker = ({authService}) => {
             email: 'mg@ipartners.co.kr',
             mobile: '000-000-0000',
             fileName: 'minjeong',
-            fileURL: null
+            fileURL: null,
+            message: 'hello'
         },
         {
             id: '2',
@@ -29,7 +30,8 @@ const Maker = ({authService}) => {
             email: 'Jay@ipartners.co.kr',
             mobile: '000-222-0000',
             fileName: 'Jay',
-            fileURL: 'Jay.png'
+            fileURL: 'Jay.png',
+            message: 'good'
         },
         {
             id: '3',
@@ -41,6 +43,7 @@ const Maker = ({authService}) => {
             mobile: '000-111-0000',
             fileName: 'Park',
             fileURL: null,
+            message: 'happy'
         },
     ]);
     const navigator = useNavigate();
