@@ -1,9 +1,8 @@
 import {React, useRef} from 'react';
 import styles from './card_add_form.module.css'
 import Button from '../button/button';
-import ImgInput from '../img_input/img_input';
 
-const CardAddForm = ({onAdd}) => {
+const CardAddForm = ({FileInput, onAdd}) => {
     const formRef = useRef(); //초기화
     const nameRef = useRef();
     const companyRef = useRef();
@@ -32,9 +31,6 @@ const CardAddForm = ({onAdd}) => {
         onAdd(card);
     }
 
-    const onInputImg = () => {
-        console.log('img');
-    }
     return (
 
         <form ref={formRef} className={styles.form}>
@@ -51,7 +47,7 @@ const CardAddForm = ({onAdd}) => {
                 <input ref={mobileRef} className={styles.input} type="text" name="mobile" placeholder='mobile' />
                 <textarea ref={messageRef} className={styles.textarea} name="message" placeholder='message'></textarea>
                 <div className={styles.fileInput}>
-                    <ImgInput className={styles.inputImg} onClick={onInputImg} />
+                    <FileInput />
                     <Button className={styles.button} name='Add' onClick={onSubmit}></Button>
                 </div>
             </div>

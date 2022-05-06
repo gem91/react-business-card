@@ -7,7 +7,7 @@ import Edit from '../edit/edit';
 import Preview from '../preview/preview';
 
 
-const Maker = ({authService}) => {
+const Maker = ({FileInput, authService}) => {
     const [cards, setCards] = useState({
         '1' : {
             id: '1',
@@ -82,7 +82,7 @@ const Maker = ({authService}) => {
       <section className={styles.maker}>
           <Header onLogout={onLogout}></Header>
           <div className={styles.container}>
-          <Edit cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard}></Edit>
+          <Edit FileInput={FileInput} cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard}></Edit>
           <Preview cards={cards}></Preview>
           </div>
           <Footer></Footer>
