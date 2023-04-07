@@ -1,8 +1,9 @@
 @value mediaQuery from '../../common/size.css';
-@value makerGreen from '../../common/colors.css';
+@value makerMainColor, makerMainColorD from '../../common/colors.css';
 
-.edit{padding: 30px; width: 50%; height: 100%; background-color:#f4e6cc;}
-.title{margin-bottom: 20px; text-align: center;color: makerGreen;}
+.edit{padding: 50px 30px 30px; width: 50%; height: 100%; background-color:#f7f5f0;}
+.title{margin-bottom: 20px; font-size: 1.6rem; text-align: center;color: makerMainColorD;
+    font-family: 'Questrial', serif;}
 @media screen and (max-width: mediaQuery) {
     .edit{width: 100%;}
 }

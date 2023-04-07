@@ -1,4 +1,32 @@
-@value makerWhite, makerGreen from '../../common/colors.css';
+@value makerWhite, makerMainColorD, makerMainColor from '../../common/colors.css';
 
-.button{ padding: 10px; flex: 1 1 50%; font-size: 14px; font-weight: bold; color: makerWhite; background-color: makerGreen; cursor: pointer; outline: 0; border: 0;border-bottom: 1px solid #2a3e47;}
-.button:hover{opacity: .8;}
+/* .button{ color: makerWhite; background-color: makerMainColor; cursor: pointer; outline: 0; border: 0;border-bottom: 1px solid #2a3e47;}
+.button:hover{opacity: .8;} */
+
+.button{ 
+  padding: 10px;
+  min-width: 100px;
+  font-size: 1.3rem; color: makerMainColor; font-weight: bold; text-align: center;
+  font-family: 'Caveat', cursive;
+  text-transform: uppercase;
+  border-radius: 50px; border: 2px solid makerWhite;
+  background-color: makerWhite;
+  transition: all .3s ease-in-out; 
+}
+.button:hover{ background-color: makerMainColorD; color: makerWhite;}
+
+.delete, .add{
+  border-radius: 0;
+  color: #fff;
+  font-weight: normal;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  border: 0;
+}
+.delete{
+  background-color: rgb(165, 58, 58);
+}
+.add{
+
+  background-color: makerMainColor;
+}

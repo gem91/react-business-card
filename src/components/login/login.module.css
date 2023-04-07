@@ -1,8 +1,17 @@
-@value makerGreen, makerWhite,makerLightPink from '../../common/colors.css';
-section{padding: 25px 0 40px;}
-.login{width: 450px; display: flex; flex-direction: column; justify-content: center; text-align: center; background-color: makerWhite;box-shadow: 3px 4px 14px 1px rgba(0,0,0,0.5);}
-.title{font-size: 1.3rem; color: #131313;}
-.lists{margin: 0; padding: 0 30px; width: 100%; display: flex; flex-direction: column;box-sizing: border-box;}
-.list{margin-bottom: 5px;}
-.button{ padding: 20px 0; width: 100%; font-size: 1.2rem; text-align: center;border-radius: 50px;background-color: makerWhite; border: 2px solid makerGreen;transition: background-color .3s ease-in-out;}
-.button:hover{ background-color: makerLightPink;}
+@value makerMainColor, makerWhite,makerLightPink from '../../common/colors.css';
+
+.popup{width: 450px; display: flex; flex-direction: column; justify-content: center; text-align: center; background-color: makerWhite;box-shadow: 3px 4px 14px 1px rgba(0,0,0,0.5);}
+.header{padding: 30px 0; font-size: 1.3rem;font-family: 'Bree Serif', serif; color: makerWhite; background-color: makerMainColor;}
+section{padding: 40px 0;}
+.title{font-size: 2.3rem; line-height: 1; font-family: 'Dongle', sans-serif; color: #4e3e34;}
+.btnbox{margin: 0; padding: 0 30px; width: 100%; display: flex; box-sizing: border-box;}
+.btnLogin{
+  margin-top: 10px;
+  padding: 15px 10px;
+  font-size: 1rem; color: makerMainColor; font-weight: bold; text-align: center;
+  border-radius: 50px; border: 2px solid makerMainColor;
+  background-color: makerWhite;
+  transition: all .3s ease-in-out; 
+  width: 100%;
+}
+.btnLogin:hover{ background-color: makerMainColor; color: makerWhite;}

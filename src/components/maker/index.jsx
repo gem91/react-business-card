@@ -1,13 +1,12 @@
-import {React, useEffect, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import {React, useState} from 'react';
 import styles from './maker.module.css'
-import Header from '../header/header';
-import Footer from '../footer/footer';
-import Edit from '../edit/edit';
-import Preview from '../preview/preview';
+import Header from '../header';
+import Footer from '../footer';
+import Edit from '../edit';
+import Preview from '../preview';
 
 
-const Maker = ({FileInput, authService}) => {
+const Maker = ({user, setUser,FileInput}) => {
     const [cards, setCards] = useState({
         '1' : {
             id: '1',
@@ -18,7 +17,7 @@ const Maker = ({FileInput, authService}) => {
             email: 'mg@ipartners.co.kr',
             mobile: '000-000-0000',
             fileName: 'minjeong',
-            fileURL: null,
+            fileURL: '/assets/images/jay.jpg',
             message: 'hello'
         },
         '2' : {
@@ -30,7 +29,7 @@ const Maker = ({FileInput, authService}) => {
             email: 'Jay@ipartners.co.kr',
             mobile: '000-222-0000',
             fileName: 'Jay',
-            fileURL: 'Jay.png',
+            fileURL: '/assets/images/KangJun.jpg',
             message: 'good'
         },
         '3' : {
@@ -42,22 +41,9 @@ const Maker = ({FileInput, authService}) => {
             email: 'Park@ipartners.co.kr',
             mobile: '000-111-0000',
             fileName: 'Park',
-            fileURL: null,
+            fileURL: '/assets/images/MinYoung.jpg',
             message: 'happy'
         },
-    });
-
-    const navigator = useNavigate();
-
-    const onLogout = () => {
-        authService.logout()
-    }
-    useEffect(()=>{
-        authService.onAuthChange(user => {
-            if(!user){
-                navigator('/')
-            }
-        });
     });
 
   
@@ -80,10 +66,10 @@ const Maker = ({FileInput, authService}) => {
   
     return(
       <section className={styles.maker}>
-          <Header onLogout={onLogout}></Header>
+          <Header user={user} setUser={setUser}></Header>
           <div className={styles.container}>
-          <Edit FileInput={FileInput} cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard}></Edit>
-          <Preview cards={cards}></Preview>
+            <Edit FileInput={FileInput} cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard}></Edit>
+            <Preview cards={cards}></Preview>
           </div>
           <Footer></Footer>
       </section>
