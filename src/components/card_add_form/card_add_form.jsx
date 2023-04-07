@@ -1,8 +1,11 @@
 import {React, useRef} from 'react';
+import { addNewCard } from '../../service/firebase';
 import styles from './card_add_form.module.css'
-import Button from '../button/button';
 
-const CardAddForm = ({FileInput, onAdd}) => {
+import Button from '../button';
+import ImageFileInput from '../image_input/imageFileInput';
+
+const CardAddForm = ({FileInput}) => {
     const formRef = useRef(); //초기화
     const nameRef = useRef();
     const companyRef = useRef();
@@ -13,10 +16,10 @@ const CardAddForm = ({FileInput, onAdd}) => {
     const messageRef = useRef();
 
 
-    const onSubmit = (event) => {
-        event.preventDefault();
+    const onSubmit = (e) => {
+        e.preventDefault();
         const card = {
-            id: Date.now(),
+            // id: Date.now(),
             name : nameRef.current.value || '',
             company : companyRef.current.value || '',
             theme : themeRef.current.value,
@@ -28,11 +31,10 @@ const CardAddForm = ({FileInput, onAdd}) => {
             fileURL: ''
         }
         formRef.current.reset();
-        onAdd(card);
+        addNewCard(card)
     }
 
     return (
-
         <form ref={formRef} className={styles.form}>
             <div className={styles.formFrame}>
                 <input ref={nameRef} className={styles.input} type="text" name="name" placeholder='name' />
@@ -47,8 +49,8 @@ const CardAddForm = ({FileInput, onAdd}) => {
                 <input ref={mobileRef} className={styles.input} type="text" name="mobile" placeholder='mobile' />
                 <textarea ref={messageRef} className={styles.textarea} name="message" placeholder='message'></textarea>
                 <div className={styles.fileInput}>
-                    <FileInput />
-                    <Button className={styles.button} name='Add' onClick={onSubmit}></Button>
+                    <ImageFileInput />
+                    <Button name='add' onClick={onSubmit}></Button>
                 </div>
             </div>
         </form>
